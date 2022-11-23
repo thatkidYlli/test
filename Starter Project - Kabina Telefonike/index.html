@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style/style.css">
+
+  <title>Telephone</title>
+</head>
+
+<body>
+  <h1>Kabina Telefonike</h1>
+
+  <hr>
+
+  <div id="llogaria">
+
+  </div>
+
+  <hr>
+
+  <!-- #### Pjesa për mbushjen e llogaris ##### -->
+  <div class="input-group">
+    <label for="mbushje">Mbushje</label>
+    <input type="number" id="mbushje" value="0">
+    <button onClick="addcredit()">Mbush</button>
+  </div>
+
+  <hr>
+
+  <!-- #### Pjesa ku shkruhet numri qe deshironi te telefononi dhe butonat #### -->
+  <div class="input-group">
+    <label for="number">Numri</label>
+    <input type="text" id="number">
+
+    <!-- ##### Hints: Krijoni funksionet per butonat thirr dhe perfundo ne Javascript file ##### -->
+    <button onClick="call()">Thirr</button>
+    <button onClick="endcall('Lidhja u perfundua')">Perfundo</button>
+  </div>
+
+  <div id="stopcall">
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

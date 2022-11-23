@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="example"></div>
+    <script>
+let n = prompt("Pozita e numrit në sekuencë");
+document.getElementById("example").innerHTML = fibonacci(n);
+
+function fibonacci(n) {
+  var x = 1,
+    y = 0,
+    tmp;
+
+  while (n >= 0) {
+    tmp = x;
+    x = x + y;
+    y = tmp;
+    n--;
+  }
+
+  return y;
+}
+</script>
+</body>
+</html>

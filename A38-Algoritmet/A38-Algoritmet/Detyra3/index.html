@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="example"></div>
+<script>
+let sorted = bubble_sort([10, 15, 40, 22,17, 99, 23, 56, 6, 50]);
+list = sorted.join();
+
+document.querySelector("#example").innerHTML = list;
+
+function bubble_sort(a) {
+  var swap;
+  var n = a.length - 1;
+  var x = a;
+  do {
+    swap = false;
+    for (var i = 0; i < n; i++) {
+      if (x[i] > x[i + 1]) {
+        var tmp = x[i];
+        x[i] = x[i + 1];
+        x[i + 1] = tmp;
+        swap = true;
+      }
+    }
+    n--;
+  } while (swap);
+  return x;
+}
+
+</script>
+</body>
+</html>

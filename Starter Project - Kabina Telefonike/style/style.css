@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  height: 100%;
+}
+
+p {
+  line-height: 1.6;
+}
+
+body {
+  padding: 5% 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.input-group, #llogaria {
+  margin: 2rem auto;
+}

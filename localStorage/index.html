@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+<body>
+     <button onclick="vendose()">Vendose nje vlere te re</button>
+     <button onclick="lexoje()">Lexoje vleren</button>
+     <button onclick="fshije()">Fshije vleren</button>
+     <p id="raporti"></p>
+
+     <script>
+        function vendose(){
+            localStorage.setItem('numri', Math.floor(Math.random() * 100 + 1));
+        }
+
+        function lexoje(){
+           n = localStorage.getItem('numri');
+           if(n == null){
+            document.getElementById('raporti').innerHTML = 'Nuk ekziston!'
+           }
+           else{
+            document.getElementById('raporti').innerHTML = n;
+           }
+
+           function fshije(){
+            localStorage.removeItem('numri')
+           }
+
+        }
+     </script>
+</body>
+</html>

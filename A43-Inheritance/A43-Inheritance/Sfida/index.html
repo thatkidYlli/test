@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="raport"></p>
+    <p id="raport1"></p>
+    <script>
+      class Mall {
+        constructor(shopname) {
+          this.shopname = shopname;
+        }
+        shopispresent() {
+          return this.shopname + " is present in ";
+        }
+      }
+
+      class Shop extends Mall {
+        constructor(name, mallname) {
+          super(name);
+          this.mallname = mallname;
+        }
+        showshop() {
+          return this.shopispresent() + this.mallname;
+        }
+      }
+
+      let newMall = new Shop("Zara", "Albi Mall");
+      let newMall1 = new Shop("KFC", "Albi Mall");
+
+      document.getElementById("raport").innerHTML = newMall.showshop();
+      document.getElementById("raport1").innerHTML = newMall1.showshop();
+    </script>
+  </body>
+</html>
